@@ -2,6 +2,16 @@ provider "aws" {
   region     = "ap-southeast-1"
 }
 
+
+terraform {
+  backend "s3" {
+    bucket = "terraformstate-scb"
+    key = "terraform.tfstate"
+    encrypt = "true"
+    region = "ap-southeast-1"
+  }
+}
+
 resource "aws_instance" "Ansible-Windows" {
   ami           = "ami-a94342d5"
   instance_type = "t2.micro"
