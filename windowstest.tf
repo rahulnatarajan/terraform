@@ -21,5 +21,6 @@ resource "aws_instance" "Ansible-Windows" {
     Name = "Anisble-Windows"
     Type = "Windows"
     Team = "DevOps"
+    Owner = "SCB"
   }
 }
