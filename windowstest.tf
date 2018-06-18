@@ -20,5 +20,6 @@ resource "aws_instance" "Ansible-Windows" {
   tags {
     Name = "Anisble-Windows"
     Type = "Windows"
+    Team = "DevOps"
   }
 }
