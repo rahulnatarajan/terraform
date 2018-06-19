@@ -22,5 +22,6 @@ resource "aws_instance" "Ansible-Windows" {
     Type = "Windows"
     Team = "DevOps"
     Owner = "SCB"
+    AppType = "Php"
   }
 }
