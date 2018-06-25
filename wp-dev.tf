@@ -6,20 +6,20 @@ provider "aws" {
 terraform {
   backend "s3" {
     bucket = "terraformstate-scb"
-    key = "terraform.tfstate"
+    key = "terraformdev.tfstate"
     encrypt = "true"
     region = "ap-southeast-1"
   }
 }
 
-resource "aws_instance" "Ansible-Windows" {
-  ami           = "ami-a94342d5"
+resource "aws_instance" "wp-dev" {
+  ami           = "ami-de90a5a2"
   instance_type = "t2.micro"
-  security_groups = ["sg-05043d7c"]
-  subnet_id = "subnet-be32b4f7"
+  security_groups = ["sg-7e5eb406"]
+  subnet_id = "subnet-06192061"
   tags {
-    Name = "Anisble-Windows"
-    Type = "Windows"
+    Name = "wp-dev"
+    Type = "Linux"
     Team = "DevOps"
     Owner = "SCB"
     AppType = "Php"
