@@ -17,6 +17,7 @@ resource "aws_instance" "wp-uat" {
   instance_type = "t2.medium"
   security_groups = ["sg-a745afdf"]
   subnet_id = "subnet-9b251cfc"
+  key_name = "awsfs_sg_kp"
   tags {
     Name = "wp-uat"
     Type = "Linux"
