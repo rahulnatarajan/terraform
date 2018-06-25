@@ -18,6 +18,7 @@ resource "aws_instance" "wp-uat" {
   security_groups = ["sg-a745afdf"]
   subnet_id = "subnet-9b251cfc"
   key_name = "awsfs_sg_kp"
+  iam_instance_profile = "Terraform-Role"
   tags {
     Name = "wp-uat"
     Type = "Linux"
