@@ -18,6 +18,7 @@ resource "aws_instance" "wp-dev" {
   security_groups = ["sg-7e5eb406"]
   key_name = "awsfs_sg_kp"
   subnet_id = "subnet-06192061"
+  iam_instance_profile = "Terraform-Role"
   tags {
     Name = "wp-dev"
     Type = "Linux"
