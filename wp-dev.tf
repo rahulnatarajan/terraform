@@ -13,10 +13,10 @@ terraform {
 }
 
 resource "aws_instance" "wp-dev" {
-  ami           = "ami-de90a5a2"
+  ami           = "ami-<>"
   instance_type = "t2.micro"
-  security_groups = ["sg-7e5eb406"]
-  subnet_id = "subnet-06192061"
+  security_groups = ["sg-<>"]
+  subnet_id = "subnet-<>"
   tags {
     Name = "wp-dev"
     Type = "Linux"
