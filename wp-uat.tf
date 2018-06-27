@@ -13,17 +13,16 @@ terraform {
 }
 
 resource "aws_instance" "wp-uat" {
-  ami           = "ami-de90a5a2"
+  ami           = "ami-<>"
   instance_type = "t2.medium"
-  security_groups = ["sg-a745afdf"]
-  subnet_id = "subnet-9b251cfc"
+  security_groups = ["sg-<>"]
+  subnet_id = "subnet-<>"
   key_name = "awsfs_sg_kp"
   iam_instance_profile = "Terraform-Role"
   tags {
     Name = "wp-uat"
     Type = "Linux"
     Team = "DevOps"
-    Owner = "SCB"
     AppType = "Php"
   }
 }
