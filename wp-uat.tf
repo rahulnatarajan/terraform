@@ -21,7 +21,6 @@ resource "aws_instance" "wp-uat" {
     Name = "wp-uat"
     Type = "Linux"
     Team = "DevOps"
-    Owner = "SCB"
     AppType = "Php"
   }
 }

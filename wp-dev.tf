@@ -21,7 +21,6 @@ resource "aws_instance" "wp-dev" {
     Name = "wp-dev"
     Type = "Linux"
     Team = "DevOps"
-    Owner = "SCB"
     AppType = "Php"
   }
 }
