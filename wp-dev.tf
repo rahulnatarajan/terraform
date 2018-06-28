@@ -13,15 +13,15 @@ terraform {
 }
 
 resource "aws_instance" "wp-dev" {
-  ami           = "ami-<>"
+  ami           = "ami-a94342d5"
   instance_type = "t2.micro"
-  security_groups = ["sg-<>"]
+  security_groups = ["sg-05043d7c"]
   key_name = "awsfs_sg_kp"
-  subnet_id = "subnet-<>"
+  subnet_id = "subnet-be32b4f7"
   iam_instance_profile = "Terraform-Role"
   tags {
     Name = "wp-dev"
-    Type = "Linux"
+    Type = "Windows"
     Team = "DevOps"
     AppType = "Php"
   }
